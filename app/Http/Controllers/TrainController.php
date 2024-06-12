@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class TrainController extends Controller
 {
     public function index() {
-        $trainList = Train::where('departure_time', 'like', '2024-06-11%')->get();
+        $trainList = Train::all();
         // dd($trainList);
         return view('welcome', compact('trainList'));
     }

@@ -26,8 +26,8 @@ return new class extends Migration
      * `company` VARCHAR(255) NOT_NULL,
      * `departure_station` VARCHAR(255) NOT_NULL,
      * `arrival_station` VARCHAR(255) NOT_NULL,
-     * `departure_time`TIMESTAMP NOT_NULL DEFAULT('2024-06-11 12:34:56'),
-     * `arrival_time`TIMESTAMP NOT_NULL DEFAULT('2024-06-11 12:34:56'),
+     * `departure_time`DATETIME NOT_NULL DEFAULT('2024-06-11 12:34:56'),
+     * `arrival_time`DATETIME NOT_NULL DEFAULT('2024-06-11 12:34:56'),
      * `train_code` VARCHAR(255) NOT_NULL,
      * `carriages` Unsigned TINYINT NOT_NULL,
      * `is_on_time` TINYINT NOT_NULL DEFAULT(1),
@@ -43,8 +43,8 @@ return new class extends Migration
             $table->string('company');
             $table->string('departure_station');
             $table->string('arrival_station');
-            $table->timestamp('departure_time')->default('2024-06-11 12:34:56');
-            $table->timestamp('arrival_time')->default('2024-06-11 12:34:56');
+            $table->dateTime('departure_time')->default('2024-06-11 12:34:56');
+            $table->dateTime('arrival_time')->default('2024-06-11 12:34:56');
             $table->string('train_code');
             $table->unsignedTinyInteger('carriages');
             $table->boolean('is_on_time')->default(true);
